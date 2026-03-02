@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Pantalla de entrada -->
+    <div id="input-screen" class="screen active">
+        <div class="content">
+            <h1 class="hacker-title">ACCESO RESTRINGIDO</h1>
+            <p class="hacker-subtitle">Identificate para continuar</p>
+            <form id="name-form">
+                <input 
+                    type="text" 
+                    id="name-input" 
+                    placeholder="USUARIO" 
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" class="btn-celebrate">ACCEDER</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pantalla de celebración -->
+    <div id="celebration-screen" class="screen">
+        <canvas id="fireworks"></canvas>
+        
+
+        
+        <!-- Paso 2: Broma -->
+        <div id="step-joke" class="celebration-step hidden">
+            <h2 class="joke-subtitle">FELIZ CUMPLEAÑOS <span id="birthday-name"></span>!</h2>
+            
+            <!-- Botón abrir regalo -->
+            <div id="gift-container">
+                <button id="open-gift-btn" class="btn-open-gift">🎁 ABRIR REGALO</button>
+            </div>
+            
+            <!-- Contenido del regalo (oculto) -->
+            <div id="gift-content" class="gift-content hidden">
+                <!-- Margaritas y carta -->
+                <div class="daisy-section">
+                    <div class="margarita-wrapper">
+                        <img src="margarita.png" alt="Margarita" class="margarita-img">
+                    </div>
+                    <div class="card">
+                        <p class="card-text">Una margarita porque si no me equivoco te gustan y tú también me caes bien ABC.</p>
+                        
+                        <!-- Bad Bunny -->
+                        <div class="bad-bunny-section">
+                            <p class="bad-bunny-title">Bad Bunny una vez dijo:</p>
+                            <div class="bad-bunny-img"><img src="image.png" alt=""></div>
+                            <p class="bad-bunny-quote">"cuando tu quiere yo te los doy</p>
+                            <p class="bad-bunny-quote">yo te costeo tengo lo'de ciene'</p>
+                            <p class="bad-bunny-quote">dale usame que eso te conviene"</p>
+                            <p> y ahora yo te lo digo a ti</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bad Bunny (Eliminado - ahora dentro de la carta) -->
+            </div>
+        </div>
+        
+        <button id="restart-btn" class="btn-restart">REINICIAR</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
